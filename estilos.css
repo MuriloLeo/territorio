@@ -1,56 +1,86 @@
 @charset "UTF-8";
 
+
+:root{
+    --cor01: #ffff;
+    --cor02: #666F98;
+    --cor03: #424769;
+    --cor04: #2d3250;
+    --cor05: #121F2F;
+    --cor-letras: #F7B176;
+}
+
+
 body{
-    background-image: linear-gradient(to right, #EBEFF2, #D5E5F2, #BBDDF2);
+    background-color: var(--cor05);
+    height: 100vh;
 }
 
-header{
-    background-color: #025E73;
-    height: 100%;
+nav.menu-lateral{
+    width: 80px;
+    height: 100vh;
+    background-color: var(--cor05);
+    padding: 40px 0px 40px 1%;
+    box-shadow: 2px 0px 10px black;
+    opacity: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+
+.btn-expandir{
     width: 100%;
-    border-radius: 10px;
-    padding: 1px;
+    padding-left: 15px;
+    margin-bottom: 10px;
 }
 
-.cabecalho .menu{
+.btn-expandir > i{
+    color: var(--cor01);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+}
+
+ul li.item-menu:hover{
+    background-color: var(--cor-letras);
+}
+
+ul li.item-menu{
+    transition: 0.3s;
+}
+
+ul li.item-menu a{
+    color: var(--cor01);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
+    line-height: 40px;
 }
 
-.menu .btn-usuario{
-    background-color: #025E73;
-    border: 1px solid lightskyblue;
-    border-radius: 25px;
-    color: white;
-    width: 180px;
-    padding: 20px;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin: 0 auto;
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
 }
 
-.menu .btn-suporte{
-    background-color: #025E73;
-    border: 1px solid lightskyblue;
-    border-radius: 25px;
-    color: white;
-    width: 180px;
-    padding: 20px;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin: 0 auto;
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
 }
 
-.menu .btn-usuario:hover{
-    background-color: #04ADBF;
-    transition: 0.5s;
+ul li.item-menu a .icone > i{
+    font-size: 30px;
+    margin-left: 10px;
 }
-
-.menu .btn-suporte:hover{
-    background-color: #04ADBF;
-    transition: 0.5s;
-}
-

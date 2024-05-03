@@ -1,4 +1,8 @@
-const botaoUsuario = document.querySelector('.usuario');
+//Expandir o menu
 
-botaoUsuario.addEventListener(botaoUsuario);
+const btnExpandir = document.querySelector('#btn-exp')
+const menuLateral = document.querySelector ('.menu-lateral')
 
+btnExpandir.addEventListener('click', function(){
+    menuLateral.classList.toggle('expandir')
+})
