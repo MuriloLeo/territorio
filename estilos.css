@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 :root{
     --cor01: #ffff;
     --cor02: #666F98;
@@ -83,4 +82,87 @@ nav.menu-lateral.expandir .txt-link{
 ul li.item-menu a .icone > i{
     font-size: 30px;
     margin-left: 10px;
+}
+
+.projetos .titulo{
+    text-align: center;
+    padding: 60px 0px;
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--cor01);
+}
+
+.projetos .container-projetos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto{
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo{
+    display: block;
+}
+
+.projetos img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    background-color: var(--cor-letras);
+    width: 100%;
+    padding: 10px 0px 10px;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto{
+    background-color: var(--cor-letras);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+    text-align: center;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto{
+    opacity: 0.7;
+    background-color: black;
+}
+
+.projetos .btn-mostrar-projetos{
+    background: none;
+    border: 1px solid var(--cor01);
+    border-radius: 25px;
+    color: var(--cor01);
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover{
+    background-color: var(--cor-letras);
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover{
+    display: none;
 }
