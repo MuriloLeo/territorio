@@ -27,6 +27,7 @@ nav.menu-lateral{
     left: 0;
     overflow: hidden;
     transition: .5s;
+    z-index: 300;
 }
 
 nav.menu-lateral.expandir{
@@ -127,6 +128,7 @@ ul li.item-menu a .icone > i{
 .projetos .projeto .informacoes-projeto{
     background-color: var(--cor-letras);
     position: absolute;
+    border: 2px solid var(--cor-letras);
     top: 0;
     width: 100%;
     height: 100%;
